@@ -1,0 +1,38 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.tiny-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.column,
+.columns {
+  flex: 1 1 0px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  min-width: 0;
+}
+.row {
+  width: 100%;
+}
+.row {
+  max-width: 72rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  padding-top: 47px;
+}
