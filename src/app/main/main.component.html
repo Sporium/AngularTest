@@ -62,15 +62,118 @@
   </div>
 </section>
 
-<section>
+<section class="video-section">
   <div class="iframe-container">
+    <div *ngIf="overShow" class="over">
+      <div class="over-text">
+        <h2>Презентація наживо</h2>
+        <div>11 березня, о 12:00</div>
+      </div>
+      <div class="over-play" id="play" (click)="Over()"></div>
+    </div>
     <iframe
+      id="player2"
       width="560"
       height="315"
-      src="https://www.youtube-nocookie.com/embed/9YffrCViTVk"
+      src="https://www.youtube.com/embed/G1IbRujko-A"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+  </div>
+</section>
+
+<section>
+  <div class="question-section-container">
+    <div class="question-section-flex text-wrap">
+      <h2>Займаєтесь будівництвом та маєте багато питань?</h2>
+      <div>
+        <p>
+          Під час онлайн-трансляції відповимо на усі запитання щодо ліквідування
+          ДАБІ, реформи системи містобудування то нової електронної системи у
+          сфері будівництва.
+        </p>
+        <p>Залишайте свій коментар нижче.</p>
+      </div>
+    </div>
+    <div class="question-section-flex finger-wrap">
+      <!-- <span id="finger"></span> -->
+      <img id="finger" src="../../assets/img/icons/Finger.svg" alt="finger" />
+    </div>
+  </div>
+</section>
+<section class="contacts-frame">
+  <div class="row">
+    <div class="columns tiny-12">
+      <div class="contacts">
+        <div class="contacts-item">
+          <div class="item-left">
+            <img alt="" src="../../assets/img/icons/Fist.svg" />
+            <h3>Зіткнулися з <br />корупцією?</h3>
+          </div>
+          <div class="item-right">
+            <p class="item-right-label">Пишіть нам</p>
+            <div class="item-right">
+              <p>hello@thedigital.gov.ua</p>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-item">
+          <div class="item-left">
+            <img alt="" src="../../assets/img/icons/Chat.svg" />
+            <h3>
+              Напишіть у <br />
+              чат-бот
+            </h3>
+          </div>
+          <div class="item-right">
+            <p class="item-right-label">Оберіть месенджер</p>
+            <div class="item-right">
+              <div class="messenger">
+                <img alt="" src="../../assets/img/icons/Viber.svg" />
+                <img alt="" src="../../assets/img/icons/Telegram.svg" />
+                <img alt="" src="../../assets/img/icons/FB.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-item">
+          <div class="item-left">
+            <img alt="" src="../../assets/img/icons/Phone.svg" />
+            <h3>Зателефонуйте <br />на гарячу лінію</h3>
+          </div>
+          <div class="item-right">
+            <p class="item-right-label">Працює з 09:00 до 18:00</p>
+            <div class="item-right">
+              <p>+38 097 162 85 29</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="subscribe_container">
+    <div class="subscribe_left subscribe-content">
+      <h2>Щотижневі новини</h2>
+      <p>Підпишіться, щоб отримувати листи</p>
+    </div>
+    <div class="subscribe-right subscribe-content">
+      <input
+        type="input"
+        class="form__field"
+        placeholder="Ваш email"
+        name="name"
+        id="name"
+        required
+      />
+      <label for="name" class="form__label">Name</label>
+      <div class="subscribe-button">
+        <span>Підписатись</span>
+      </div>
+      <p>Даю згоду на обробку та використання персональних даних</p>
+    </div>
   </div>
 </section>

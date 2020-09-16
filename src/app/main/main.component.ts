@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   constructor() {}
+  overShow: boolean = true;
 
+  Over() {
+    this.overShow = !this.overShow;
+
+    // document
+    //   .querySelector(
+    //     '#player_uid_754303974_1 > div.ytp-cued-thumbnail-overlay > button'
+    //   )
+    //   .click();
+  }
   ngOnInit() {}
 }

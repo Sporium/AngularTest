@@ -5,7 +5,7 @@
 }
 .main {
   background: #fff;
-  color: #000;
+  color: #e5e5e5;
 }
 body {
   color: #000;
@@ -19,7 +19,7 @@ body {
   visibility: visible;
   opacity: 1;
   -webkit-print-color-adjust: exact;
-  background: #000;
+  background: #ffffff;
 }
 
 @font-face {
