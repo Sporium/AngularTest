@@ -986,3 +986,6 @@ img {
     display: flex;
   }
 }
+.error {
+  border: 2px solid red!important;
+}

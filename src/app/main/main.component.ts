@@ -1,7 +1,9 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { User } from '../user';
 import { UserService } from '../user-service';
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -9,7 +11,7 @@ import { UserService } from '../user-service';
 })
 export class MainComponent implements OnInit {
   overShow: boolean = true;
-
+  modalShow: boolean = true;
   isValidFormSubmitted = null;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
   userForm = this.formBuilder.group({
@@ -20,11 +22,16 @@ export class MainComponent implements OnInit {
     ],
   });
   user = new User();
+
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private vievportScroller: ViewportScroller
   ) {}
 
+  onClickScroll(elementId: string): void {
+    this.vievportScroller.scrollToAnchor(elementId);
+  }
   Over() {
     this.overShow = !this.overShow;
   }
@@ -34,7 +41,7 @@ export class MainComponent implements OnInit {
     if (this.userForm.invalid) {
       return;
     } else {
-      alert(1);
+      this.modalShow = true;
     }
     this.isValidFormSubmitted = true;
     this.user = this.userForm.value;
@@ -44,5 +51,19 @@ export class MainComponent implements OnInit {
 
   get officialEmail() {
     return this.userForm.get('officialEmail');
+  }
+  public testCall() {
+    this.modalShow = !this.modalShow;
+
+    this.hide();
+  }
+  hide() {}
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
   }
 }

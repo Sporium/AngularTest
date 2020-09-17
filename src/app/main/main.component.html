@@ -6,10 +6,10 @@
           Реформування системи<br />
           містобудування
         </h1>
-        <a class="btn-play" href="#" target="_blank"
+        <span class="btn-play" (click)="onClickScroll('video')"
           ><span><img alt="icon" src="../../assets/img/icons/Play.svg" /></span>
           Відеотрансляція
-        </a>
+        </span>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@
 </section>
 
 <section class="video-section">
-  <div class="iframe-container">
+  <div class="iframe-container" id="video" #target>
     <div *ngIf="overShow" class="over">
       <div class="over-text">
         <h2>Презентація наживо</h2>
@@ -162,7 +162,15 @@
     </div>
     <div class="subscribe-right subscribe-content">
       <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" class="user-box">
-        <input formControlName="officialEmail" />
+        <input
+          formControlName="officialEmail"
+          [ngClass]="{
+            error:
+              officialEmail.errors &&
+              isValidFormSubmitted != null &&
+              !isValidFormSubmitted
+          }"
+        />
         <label>Ваш email</label>
         <div
           *ngIf="
@@ -170,7 +178,6 @@
             isValidFormSubmitted != null &&
             !isValidFormSubmitted
           "
-          [ngClass]="'error'"
         >
           <div *ngIf="officialEmail.errors.required">
             Будь ласка введіть email
@@ -190,3 +197,4 @@
     </div>
   </div>
 </section>
+<app-modal *ngIf="modalShow"></app-modal>
