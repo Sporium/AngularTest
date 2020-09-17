@@ -372,7 +372,8 @@ img {
 .subscribe-button {
   left: calc(50% - 198.79px / 2 + 258.93px);
   top: calc(50% - 24px / 2 + 1341.5px);
-
+  height: 64px;
+  width: 294px;
   font-family: e-Ukraine;
   font-style: normal;
   font-weight: normal;
@@ -386,6 +387,9 @@ img {
 
   color: #ffffff;
 }
+.subscribe-button span {
+  margin: auto;
+}
 .subscribe_container {
   display: flex;
   height: 100px;
@@ -396,7 +400,10 @@ img {
 .subscribe-content {
   margin: auto;
   padding: 5px;
-  flex: 0 1 auto;
+  flex: 0 1;
+}
+.subscribe-content p {
+  margin-top: 21px;
 }
 .subscribe_left {
   font-size: 18px;
@@ -409,66 +416,56 @@ img {
 
   letter-spacing: -0.02em;
 }
-
-.form__group {
+.user-box {
   position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
-  width: 50%;
 }
-
-.form__field {
-  font-family: inherit;
+.user-box input {
   width: 100%;
-  border: 0;
-  border-bottom: 2px solid #9b9b9b;
-  outline: 0;
-  font-size: 1.3rem;
-  color: #fff;
-  padding: 7px 0;
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
   background: transparent;
-  transition: border-color 0.2s;
 }
-.form__field::placeholder {
-  color: transparent;
-}
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
-  cursor: text;
-  top: 20px;
-}
-
-.form__label {
+.user-box label {
   position: absolute;
   top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #9b9b9b;
+  left: 0;
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+
+  opacity: 0.5;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
-.form__field:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #11998e, #38ef7d);
-  border-image-slice: 1;
+.user-box input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: #000000;
+
+  opacity: 0.5;
+  font-size: 12px;
 }
-.form__field:focus ~ .form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #11998e;
-  font-weight: 700;
+@media print, screen and (max-width: 47.99875em) {
+  .subscribe_container {
+    flex-direction: column;
+  }
+  .subscribe-button {
+    width: 184px;
+    height: 48px;
+  }
+  .subscribe-right {
+    padding: 28px;
+  }
 }
 
-/* reset input */
-.form__field:required,
-.form__field:invalid {
-  box-shadow: none;
-}
 /* /subscribe */
 
 /* style contact */

@@ -161,19 +161,32 @@
       <p>Підпишіться, щоб отримувати листи</p>
     </div>
     <div class="subscribe-right subscribe-content">
-      <input
-        type="input"
-        class="form__field"
-        placeholder="Ваш email"
-        name="name"
-        id="name"
-        required
-      />
-      <label for="name" class="form__label">Name</label>
+      <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" class="user-box">
+        <input formControlName="officialEmail" />
+        <label>Ваш email</label>
+        <div
+          *ngIf="
+            officialEmail.errors &&
+            isValidFormSubmitted != null &&
+            !isValidFormSubmitted
+          "
+          [ngClass]="'error'"
+        >
+          <div *ngIf="officialEmail.errors.required">
+            Будь ласка введіть email
+          </div>
+          <div *ngIf="officialEmail.errors.pattern">
+            Будь ласка введіть правильний email
+          </div>
+        </div>
+      </form>
       <div class="subscribe-button">
         <span>Підписатись</span>
       </div>
-      <p>Даю згоду на обробку та використання персональних даних</p>
+      <p>
+        Натискаючи кнопку, ви автоматично погоджуєтесь на обробку персональних
+        даних
+      </p>
     </div>
   </div>
 </section>
