@@ -11,7 +11,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class MainComponent implements OnInit {
   overShow: boolean = true;
-  modalShow: boolean = true;
+  public modalShow: boolean = true;
   isValidFormSubmitted = null;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
   userForm = this.formBuilder.group({
@@ -41,6 +41,7 @@ export class MainComponent implements OnInit {
     if (this.userForm.invalid) {
       return;
     } else {
+      debugger;
       this.modalShow = true;
     }
     this.isValidFormSubmitted = true;
@@ -54,10 +55,11 @@ export class MainComponent implements OnInit {
   }
   public testCall() {
     this.modalShow = !this.modalShow;
-
-    this.hide();
   }
-  hide() {}
+  hide() {
+    this.modalShow = !this.modalShow;
+    debugger;
+  }
   scrollToElement($element): void {
     console.log($element);
     $element.scrollIntoView({

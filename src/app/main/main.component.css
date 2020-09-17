@@ -987,5 +987,118 @@ img {
   }
 }
 .error {
-  border: 2px solid red!important;
+  border: 2px solid red !important;
 }
+
+/* modal */
+.wrapper {
+  position: fixed;
+
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+}
+.modal .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+  width: 664px;
+  height: 411px;
+}
+.modal button {
+  color: #fff;
+  background: #000000;
+  border-radius: 40px;
+  width: 192px;
+  height: 64px;
+  left: calc(50% - 192px / 2 - 172px);
+  top: calc(50% - 64px / 2 + 96px);
+  margin-left: 64px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.modal span {
+  display: block;
+  background: url(../../assets/img/icons/Close.svg) no-repeat;
+  width: 37.59px;
+  height: 36px;
+  /* margin-top: 34px; */
+  margin-right: 56px;
+  cursor: pointer;
+}
+.modal h1 {
+  /* margin-top: 52px; */
+  margin-left: 64px;
+}
+.modal .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.modal p {
+  width: 436px;
+  height: 64px;
+  margin-left: 64px;
+}
+@media print, screen and (max-width: 768px) {
+  .modal .content {
+    width: 400px;
+    height: 200px;
+  }
+  .modal h1 {
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  .modal span {
+    margin-right: 56px;
+    width: 20px;
+    height: 36px;
+    background-size: 20px;
+  }
+  .modal .title {
+    height: 60px;
+  }
+  .modal p {
+    margin-left: 24px;
+  }
+  .modal button {
+    width: 152px;
+    height: 34px;
+    /* left: calc(50% - 192px / 2 - 172px); */
+    /* top: calc(50% - 64px / 2 + 96px); */
+    margin-left: 104px;
+    margin-top: 0;
+  }
+}
+@media print, screen and (max-width: 768px) {
+  .modal .content {
+    width: 288px;
+    height: 242px;
+  }
+  .modal p {
+    position: absolute;
+    left: 11.25%;
+    right: 10.94%;
+    top: 42.25%;
+    bottom: 50.91%;
+    font-size: 13px;
+    line-height: 130%;
+
+    letter-spacing: -0.02em;
+    margin-left: -16px;
+  }
+  .modal button {
+    width: 152px;
+    height: 34px;
+    margin-left: 55px;
+    margin-top: 110px;
+  }
+}
+
+/* /modal */

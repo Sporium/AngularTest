@@ -188,7 +188,7 @@
         </div>
       </form>
       <div class="subscribe-button">
-        <span>Підписатись</span>
+        <span (click)="onFormSubmit()">Підписатись</span>
       </div>
       <p>
         Натискаючи кнопку, ви автоматично погоджуєтесь на обробку персональних
@@ -197,4 +197,17 @@
     </div>
   </div>
 </section>
-<app-modal *ngIf="modalShow"></app-modal>
+<div *ngIf="modalShow" class="wrapper modal">
+  <div class="content">
+    <div class="title">
+      <h1>Дякуємо</h1>
+      <span (click)="hide()"></span>
+    </div>
+    <p>
+      Ми відправили лист на вашу пошту. <br />
+      Будь ласка, підтвердіть підписку.
+    </p>
+    <button (click)="hide()">OK</button>
+  </div>
+</div>
+<!-- <app-modal *ngIf="modalShow"></app-modal> -->
