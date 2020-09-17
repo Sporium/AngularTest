@@ -33,9 +33,8 @@ export class MainComponent implements OnInit {
     this.isValidFormSubmitted = false;
     if (this.userForm.invalid) {
       return;
-    }
-    else {
-      alert(1)
+    } else {
+      alert(1);
     }
     this.isValidFormSubmitted = true;
     this.user = this.userForm.value;

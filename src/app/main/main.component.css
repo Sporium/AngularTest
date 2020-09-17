@@ -231,7 +231,7 @@ h3 {
 
 /* section finger */
 #finger {
-  /* position: absolute; */
+  position: relative;
   width: 129px;
   height: 129px;
   /* background: url(../../assets/img/icons/Finger.svg); */
@@ -277,10 +277,10 @@ h3 {
 @keyframes MoveUpDown {
   0%,
   100% {
-    margin-top: 0;
+    top: 0;
   }
   50% {
-    margin-top: 100px;
+    top: 100px;
   }
 }
 
@@ -362,6 +362,9 @@ img {
 }
 .messenger {
   display: flex;
+}
+.messenger img {
+  margin-left: 22px;
 }
 /* /contact */
 /* subscribe */
@@ -489,7 +492,8 @@ img {
   }
   .contacts-frame .contacts-item {
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     padding: 50px 0 40px;
   }
 }
@@ -904,3 +908,81 @@ img {
   margin-top: 24px;
 }
 /* /Style.scheme */
+@media print, screen and (max-width: 320px) {
+  .text-wrap h2 {
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+  }
+  .text-wrap p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .over-play {
+    width: 52px;
+    height: 52px;
+  }
+  .over-text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 9px;
+    margin-top: -14px;
+  }
+  #finger {
+    width: 103px;
+    height: 102px;
+  }
+  .subscribe_left h2 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+  .subscribe_left p {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+@media print, screen and (max-width: 425px) {
+  .text-wrap h2 {
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+  }
+  .text-wrap p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .over-play {
+    width: 52px;
+    height: 52px;
+  }
+  .over-text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 9px;
+    margin-top: -14px;
+  }
+  #finger {
+    width: 103px;
+    height: 102px;
+  }
+  .subscribe_left h2 {
+    font-size: 26px;
+    line-height: 31px;
+  }
+  .subscribe_left p {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+@media print, screen and (max-width: 768px) {
+  .text-wrap {
+    margin-left: 80px;
+  }
+  .video-section {
+    margin-bottom: 0px;
+  }
+  .finger-wrap {
+    margin-left: 54px;
+    display: flex;
+  }
+}
