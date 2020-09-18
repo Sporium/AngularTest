@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import { MainComponent } from './main.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserService } from '../user-service';
 describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
@@ -13,7 +14,7 @@ describe('MainComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MainComponent],
-      imports: [ReactiveFormsModule, FormsModule],
+      imports: [ReactiveFormsModule, FormsModule, UserService],
       schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
     }).compileComponents();
   });

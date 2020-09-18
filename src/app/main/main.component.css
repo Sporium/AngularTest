@@ -1,4 +1,4 @@
-.main[_ngcontent-serverApp-c2] {
+.main {
   background: #fff;
   color: #000;
 }
@@ -13,6 +13,7 @@ img {
 }
 
 .btn-play {
+  cursor: pointer;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -176,7 +177,7 @@ h3 {
 }
 .over-play {
   background: url(../../assets/img/icons/Subtract.svg) 0 0 / cover no-repeat;
-
+  cursor: pointer;
   width: 116px;
   height: 116px;
   margin: auto;
@@ -360,6 +361,10 @@ img {
   line-height: 29px;
   opacity: 0.9;
 }
+.item-right p a {
+  text-decoration: none;
+  color: #000000;
+}
 .messenger {
   display: flex;
 }
@@ -373,6 +378,7 @@ img {
   border-radius: 40px;
 }
 .subscribe-button {
+  cursor: pointer;
   left: calc(50% - 198.79px / 2 + 258.93px);
   top: calc(50% - 24px / 2 + 1341.5px);
   height: 64px;
@@ -778,20 +784,20 @@ img {
 /* /Style.hero */
 
 /* Style.scheme */
-.scheme[_ngcontent-serverApp-c5] {
+.scheme {
   background: #fff;
   color: #000;
   display: flex;
   padding: 100px 0 46px;
   overflow: hidden;
 }
-.scheme__content[_ngcontent-serverApp-c5] {
+.scheme__content {
   display: flex;
   flex-wrap: wrap;
   counter-reset: title;
   margin-right: -32px;
 }
-.scheme__content[_ngcontent-serverApp-c5] .item[_ngcontent-serverApp-c5] {
+.scheme__content .item {
   display: flex;
   flex-direction: column;
   max-width: 352px;
@@ -802,10 +808,10 @@ img {
   margin-bottom: 74px;
 }
 @media print, screen and (max-width: 79.99875em) {
-  .scheme__content[_ngcontent-serverApp-c5] {
+  .scheme__content {
     margin-right: 0;
   }
-  .scheme__content[_ngcontent-serverApp-c5] .item[_ngcontent-serverApp-c5] {
+  .scheme__content .item {
     width: 33.33333%;
     margin-right: 0;
     padding-right: 20px;
@@ -813,26 +819,25 @@ img {
   }
 }
 @media print, screen and (max-width: 64.06125em) {
-  .scheme[_ngcontent-serverApp-c5] {
+  .scheme {
     padding: 60px 0 20px;
   }
-  .scheme__content[_ngcontent-serverApp-c5] .item[_ngcontent-serverApp-c5] {
+  .scheme__content .item {
     width: 50%;
   }
 }
 @media print, screen and (max-width: 47.99875em) {
-  .scheme[_ngcontent-serverApp-c5] {
+  .scheme {
     padding: 55px 0 14px;
   }
-  .scheme__content[_ngcontent-serverApp-c5] .item[_ngcontent-serverApp-c5] {
+  .scheme__content .item {
     width: 100%;
     max-width: 350px;
     margin: 0 auto 40px;
     padding-right: 0;
   }
 }
-.scheme__content[_ngcontent-serverApp-c5]
-  .item__number[_ngcontent-serverApp-c5] {
+.scheme__content .item__number {
   background: #f4f4f4;
   display: inline-block;
   border-radius: 30px;
@@ -841,8 +846,7 @@ img {
   position: relative;
   margin-bottom: 20px;
 }
-.scheme__content[_ngcontent-serverApp-c5]
-  .item__number[_ngcontent-serverApp-c5]:before {
+.scheme__content .item__number:before {
   counter-increment: title;
   content: "0" counter(title);
   position: absolute;
@@ -856,8 +860,7 @@ img {
   font-size: 14px;
   line-height: 17px;
 }
-.scheme__content[_ngcontent-serverApp-c5]
-  .item__title[_ngcontent-serverApp-c5] {
+.scheme__content .item__title {
   font-size: 36px;
   line-height: 43px;
   color: #000;
@@ -865,46 +868,39 @@ img {
   margin-bottom: 30px;
 }
 @media print, screen and (max-width: 64.06125em) {
-  .scheme__content[_ngcontent-serverApp-c5]
-    .item__title[_ngcontent-serverApp-c5] {
+  .scheme__content .item__title {
     font-size: 32px;
     line-height: 1.4;
   }
 }
 @media print, screen and (max-width: 47.99875em) {
-  .scheme__content[_ngcontent-serverApp-c5]
-    .item__title[_ngcontent-serverApp-c5] {
+  .scheme__content .item__title {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 20px;
   }
 }
-.scheme__content[_ngcontent-serverApp-c5] .item__text[_ngcontent-serverApp-c5] {
+.scheme__content .item__text {
   font-size: 18px;
   line-height: 22px;
   color: #000;
 }
 @media print, screen and (max-width: 64.06125em) {
-  .scheme__content[_ngcontent-serverApp-c5]
-    .item__text[_ngcontent-serverApp-c5] {
+  .scheme__content .item__text {
     font-size: 16px;
     line-height: 19px;
   }
 }
 @media print, screen and (max-width: 47.99875em) {
-  .scheme__content[_ngcontent-serverApp-c5]
-    .item__text[_ngcontent-serverApp-c5] {
+  .scheme__content .item__text {
     font-size: 14px;
     line-height: 17px;
   }
 }
-.scheme__content[_ngcontent-serverApp-c5]
-  .item__text.lh27[_ngcontent-serverApp-c5] {
+.scheme__content .item__text.lh27 {
   line-height: 27px;
 }
-.scheme__content[_ngcontent-serverApp-c5]
-  .item__text[_ngcontent-serverApp-c5]
-  + .item__text[_ngcontent-serverApp-c5] {
+.scheme__content .item__text + .item__text {
   margin-top: 24px;
 }
 /* /Style.scheme */

@@ -114,7 +114,11 @@
           <div class="item-right">
             <p class="item-right-label">Пишіть нам</p>
             <div class="item-right">
-              <p>hello@thedigital.gov.ua</p>
+              <p>
+                <a href="mailto:hello@thedigital.gov.ua"
+                  >hello@thedigital.gov.ua</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -130,9 +134,15 @@
             <p class="item-right-label">Оберіть месенджер</p>
             <div class="item-right">
               <div class="messenger">
-                <img alt="" src="../../assets/img/icons/Viber.svg" />
-                <img alt="" src="../../assets/img/icons/Telegram.svg" />
-                <img alt="" src="../../assets/img/icons/FB.svg" />
+                <a href=""
+                  ><img alt="" src="../../assets/img/icons/Viber.svg"
+                /></a>
+                <a href=""
+                  ><img alt="" src="../../assets/img/icons/Telegram.svg"
+                /></a>
+                <a href=""
+                  ><img alt="" src="../../assets/img/icons/FB.svg"
+                /></a>
               </div>
             </div>
           </div>
@@ -187,8 +197,8 @@
           </div>
         </div>
       </form>
-      <div class="subscribe-button">
-        <span (click)="onFormSubmit()">Підписатись</span>
+      <div class="subscribe-button" (click)="onFormSubmit()">
+        <span>Підписатись</span>
       </div>
       <p>
         Натискаючи кнопку, ви автоматично погоджуєтесь на обробку персональних
@@ -210,4 +220,3 @@
     <button (click)="hide()">OK</button>
   </div>
 </div>
-<!-- <app-modal *ngIf="modalShow"></app-modal> -->

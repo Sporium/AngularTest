@@ -1,6 +1,5 @@
-import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { User } from '../user';
 import { UserService } from '../user-service';
 import { ViewportScroller } from '@angular/common';
@@ -8,10 +7,11 @@ import { ViewportScroller } from '@angular/common';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
+  providers: [UserService],
 })
 export class MainComponent implements OnInit {
   overShow: boolean = true;
-  public modalShow: boolean = true;
+  public modalShow: boolean = false;
   isValidFormSubmitted = null;
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$';
   userForm = this.formBuilder.group({
@@ -37,11 +37,11 @@ export class MainComponent implements OnInit {
   }
   ngOnInit() {}
   onFormSubmit() {
+    debugger;
     this.isValidFormSubmitted = false;
     if (this.userForm.invalid) {
       return;
     } else {
-      debugger;
       this.modalShow = true;
     }
     this.isValidFormSubmitted = true;
@@ -53,9 +53,9 @@ export class MainComponent implements OnInit {
   get officialEmail() {
     return this.userForm.get('officialEmail');
   }
-  public testCall() {
-    this.modalShow = !this.modalShow;
-  }
+  // public testCall() {
+  //   this.modalShow = !this.modalShow;
+  // }
   hide() {
     this.modalShow = !this.modalShow;
     debugger;
